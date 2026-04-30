@@ -145,3 +145,33 @@ footer p {
     height: 250px;
   }
 }
+/* تنسيق الحاوية */
+#info-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+/* كل قسم يأخذ نصف العرض */
+#info-sections .delivery,
+#info-sections .contact {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* العناوين */
+#info-sections h2 {
+  color: #b30059;
+  margin-bottom: 15px;
+}
+
+/* نسخة الهاتف */
+@media (max-width: 768px) {
+  #info-sections {
+    flex-direction: column;
+  }
+}
