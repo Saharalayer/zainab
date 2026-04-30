@@ -120,3 +120,28 @@ footer {
 footer p {
   margin: 5px 0;
 }
+/* نسخة الهاتف */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links a {
+    font-size: 1.5em;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  #map, iframe {
+    height: 250px;
+  }
+}
