@@ -30,6 +30,7 @@
         <li><a href="#social">تابعونا</a></li>
       </ul>
     </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
 
   <!-- قسم المنتجات -->
@@ -102,6 +103,20 @@
     <p>© 2026 House of Zainab - جميع الحقوق محفوظة</p>
     <p>متجرك سيدتي .. حيث أناقتك</p>
   </footer>
+
+  <!-- سكربت القائمة للهاتف -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector("nav ul");
+      menu.classList.toggle("active");
+    }
+    // إغلاق القائمة عند الضغط على أي رابط
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.querySelector("nav ul").classList.remove("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
