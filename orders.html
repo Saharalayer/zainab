@@ -18,14 +18,14 @@
 
   <!-- نموذج الطلب -->
   <section id="order-form">
-    <form>
+    <form id="orderForm">
       <!-- اختيار المنتج -->
       <label for="product">اختر المنتج:</label>
       <select id="product" name="product" required>
         <option value="">-- اختاري --</option>
-        <option value="melhaf">ملاحف</option>
-        <option value="siikan">صيكان</option>
-        <option value="accessories">إكسسوارات</option>
+        <option value="ملاحف">ملاحف</option>
+        <option value="صيكان">صيكان</option>
+        <option value="إكسسوارات">إكسسوارات</option>
       </select>
 
       <!-- الكمية -->
@@ -46,13 +46,13 @@
       <label for="delivery">طريقة التوصيل:</label>
       <select id="delivery" name="delivery" required>
         <option value="">-- اختاري --</option>
-        <option value="home">توصيل إلى المنزل داخل المدينة</option>
-        <option value="fast">توصيل سريع في نفس اليوم</option>
-        <option value="pickup">الاستلام من المتجر مباشرة</option>
+        <option value="توصيل إلى المنزل داخل المدينة">توصيل إلى المنزل داخل المدينة</option>
+        <option value="توصيل سريع في نفس اليوم">توصيل سريع في نفس اليوم</option>
+        <option value="الاستلام من المتجر مباشرة">الاستلام من المتجر مباشرة</option>
       </select>
 
       <!-- زر الإرسال -->
-      <button type="submit">إرسال الطلب</button>
+      <button type="submit">إرسال الطلب عبر واتساب</button>
     </form>
 
     <!-- قسم التواصل الاجتماعي -->
@@ -71,6 +71,30 @@
   <footer>
     <p>© 2026 House of Zainab - جميع الحقوق محفوظة</p>
   </footer>
+
+  <!-- سكربت واتساب -->
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const product = document.getElementById("product").value;
+      const quantity = document.getElementById("quantity").value;
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
+      const delivery = document.getElementById("delivery").value;
+
+      const message = `طلب جديد من موقع House of Zainab:%0A
+      المنتج: ${product}%0A
+      الكمية: ${quantity}%0A
+      الاسم: ${name}%0A
+      الهاتف: ${phone}%0A
+      العنوان: ${address}%0A
+      طريقة التوصيل: ${delivery}`;
+
+      const whatsappUrl = `https://wa.me/212687174684?text=${message}`;
+      window.open(whatsappUrl, "_blank");
+    });
+  </script>
 
 </body>
 </html>
