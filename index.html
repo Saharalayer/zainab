@@ -12,19 +12,6 @@
   <meta name="description" content="House of Zainab - متجر أنيق يقدم الملاحف المغربية الأصيلة، الصيكان العصرية، والإكسسوارات الفاخرة. اكتشفي أناقتك معنا.">
   <meta name="keywords" content="House of Zainab, ملاحف, صيكان, إكسسوارات, متجر نسائي, أناقة, المغرب, العيون, متجر أونلاين">
   <meta name="author" content="House of Zainab">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="House of Zainab - متجرك سيدتي حيث أناقتك">
-  <meta property="og:description" content="اكتشفي أجمل الملاحف والصيكان والإكسسوارات مع House of Zainab.">
-  <meta property="og:image" content="images/logo.png">
-  <meta property="og:url" content="https://saharalayer.github.io/zainab/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="House of Zainab">
-  <meta name="twitter:description" content="متجر الملاحف والصيكان والإكسسوارات - حيث أناقتك.">
-  <meta name="twitter:image" content="images/logo.png">
 </head>
 <body>
 
@@ -83,7 +70,8 @@
     <p>الهاتف: +212687174684</p>
     <p>واتساب: <a href="https://wa.me/212687174684">تواصل معنا مباشرة</a></p>
     <p>العنوان: العيون، المغرب</p>
-    <div id="map"></div>
+    <!-- خريطة Google -->
+    <iframe src="https://share.google/wuFX44WQTCAVw2xgs" width="100%" height="300" style="border:2px solid #f8cce0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <!-- قسم الشبكات الاجتماعية -->
@@ -102,22 +90,6 @@
     <p>© 2026 House of Zainab - جميع الحقوق محفوظة</p>
     <p>متجرك سيدتي .. حيث أناقتك</p>
   </footer>
-
-  <!-- Google Maps Script -->
-  <script>
-    function initMap() {
-      var location = { lat: 27.1253, lng: -13.1625 }; // إحداثيات العيون
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: location
-      });
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 
 </body>
 </html>
