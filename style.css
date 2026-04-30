@@ -24,6 +24,7 @@ header {
   background-color: #f8cce0;
   padding: 20px;
   text-align: center;
+  position: relative;
 }
 
 header .logo img {
@@ -36,6 +37,7 @@ header h1 {
   font-size: 2.5em;
 }
 
+/* القائمة */
 nav ul {
   list-style: none;
   padding: 0;
@@ -54,6 +56,17 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #b30059;
+}
+
+/* زر القائمة للهاتف */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #333;
 }
 
 /* المنتجات */
@@ -107,7 +120,7 @@ nav ul li a:hover {
 #info-sections h2 {
   color: #b30059;
   margin-bottom: 15px;
-  text-align: right; /* محاذاة للعربية */
+  text-align: right;
 }
 
 /* الشبكات الاجتماعية */
@@ -149,9 +162,26 @@ footer p {
 
 /* نسخة الهاتف */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 10px;
+    display: none; /* مخفية افتراضياً */
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+  }
+
+  nav ul.active {
+    display: flex; /* تظهر عند الضغط */
   }
 
   header h1 {
@@ -162,16 +192,11 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .social-links a {
-    font-size: 1.5em;
-    margin: 10px;
+  #info-sections {
+    flex-direction: column;
   }
 
   #map, iframe {
     height: 250px;
-  }
-
-  #info-sections {
-    flex-direction: column;
   }
 }
