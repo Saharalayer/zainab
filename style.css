@@ -81,30 +81,33 @@ nav ul li a:hover {
 /* الحاوية للتوصيل والاتصال */
 #info-sections {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   padding: 40px 20px;
 }
 
-#info-sections .delivery {
-  flex: 1;
-  background: #f8cce0; /* وردي فاتح */
+#info-sections .delivery,
+#info-sections .contact {
+  flex: 1 1 45%;
+  min-width: 300px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+#info-sections .delivery {
+  background: #f8cce0; /* وردي فاتح */
+}
+
 #info-sections .contact {
-  flex: 1;
   background: #f9f9f9; /* رمادي فاتح */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 #info-sections h2 {
   color: #b30059;
   margin-bottom: 15px;
+  text-align: right; /* محاذاة للعربية */
 }
 
 /* الشبكات الاجتماعية */
