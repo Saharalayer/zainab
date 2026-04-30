@@ -3,18 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZAINAB House - الملاحف والصيكان والإكسسوارات</title>
+  <title>House of Zainab - الملاحف والصيكان والإكسسوارات</title>
   <link rel="stylesheet" href="style.css">
   <!-- أيقونات Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="House of Zainab - متجر أنيق يقدم الملاحف المغربية الأصيلة، الصيكان العصرية، والإكسسوارات الفاخرة. اكتشفي أناقتك معنا.">
+  <meta name="keywords" content="House of Zainab, ملاحف, صيكان, إكسسوارات, متجر نسائي, أناقة, المغرب, العيون, متجر أونلاين">
+  <meta name="author" content="House of Zainab">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="House of Zainab - متجرك سيدتي حيث أناقتك">
+  <meta property="og:description" content="اكتشفي أجمل الملاحف والصيكان والإكسسوارات مع House of Zainab.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:url" content="https://saharalayer.github.io/zainab/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="House of Zainab">
+  <meta name="twitter:description" content="متجر الملاحف والصيكان والإكسسوارات - حيث أناقتك.">
+  <meta name="twitter:image" content="images/logo.png">
 </head>
 <body>
 
-  <!-- رأس الصفحة مع الشعار -->
+  <!-- رأس الصفحة -->
   <header>
     <div class="logo">
-      <img src="images/logo.png" alt="شعار ZAINAB House">
+      <img src="images/logo.png" alt="شعار House of Zainab">
     </div>
+    <h1>House of Zainab</h1>
     <nav>
       <ul>
         <li><a href="#products">المنتجات</a></li>
@@ -55,15 +74,16 @@
       <li>التوصيل السريع في نفس اليوم.</li>
       <li>الاستلام من المتجر مباشرة.</li>
     </ul>
-    <p>لطلب منتجاتنا عبر Google: <a href="رابط_الطلب">اضغط هنا</a></p>
+    <p>لطلب منتجاتنا عبر Google: <a href="https://share.google/wuFX44WQTCAVw2xgs">اضغط هنا</a></p>
   </section>
 
   <!-- قسم التواصل -->
   <section id="contact">
     <h2>اتصل بنا</h2>
-    <p>الهاتف: 06 87 17 46 84</p>
+    <p>الهاتف: +212687174684</p>
     <p>واتساب: <a href="https://wa.me/212687174684">تواصل معنا مباشرة</a></p>
     <p>العنوان: العيون، المغرب</p>
+    <div id="map"></div>
   </section>
 
   <!-- قسم الشبكات الاجتماعية -->
@@ -79,9 +99,25 @@
 
   <!-- تذييل -->
   <footer>
-    <p>© 2026 ZAINAB House - جميع الحقوق محفوظة</p>
+    <p>© 2026 House of Zainab - جميع الحقوق محفوظة</p>
     <p>متجرك سيدتي .. حيث أناقتك</p>
   </footer>
+
+  <!-- Google Maps Script -->
+  <script>
+    function initMap() {
+      var location = { lat: 27.1253, lng: -13.1625 }; // إحداثيات العيون
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: location
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 
 </body>
 </html>
