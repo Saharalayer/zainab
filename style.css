@@ -1,40 +1,55 @@
+/* استيراد الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap'); /* بديل قريب من خط الجزيرة */
+
 /* إعدادات عامة */
 body {
-  font-family: "Tahoma", "Arial", sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.8;
+}
+
+/* العناوين */
+h1, h2, h3 {
+  font-family: 'Almarai', sans-serif;
+  color: #b30059; /* وردي غامق */
+  margin-bottom: 10px;
 }
 
 /* رأس الصفحة */
 header {
   background-color: #f8cce0; /* وردي فاتح */
-  color: #333;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+}
+
+header .logo img {
+  max-width: 120px;
+  margin-bottom: 10px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
-  color: #b30059; /* وردي غامق */
+  font-size: 2.5em;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 15px 0 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -43,58 +58,59 @@ nav ul li a:hover {
 
 /* المنتجات */
 #products {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .product img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .product h3 {
   margin: 10px 0;
-  color: #b30059;
 }
 
 /* قسم التوصيل */
 #delivery {
   background-color: #f9f9f9;
-  padding: 30px 20px;
-}
-
-#delivery h2 {
-  color: #b30059;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 /* قسم التواصل */
 #contact {
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-#contact h2 {
-  color: #b30059;
+#map {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  border: 2px solid #f8cce0;
+  border-radius: 8px;
 }
 
 /* الشبكات الاجتماعية */
 #social {
   background-color: #f8cce0;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .social-links a {
-  margin: 0 10px;
-  font-size: 1.5em;
+  margin: 0 15px;
+  font-size: 1.8em;
   color: #333;
-  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
@@ -106,7 +122,7 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
 }
 
 footer p {
