@@ -1,6 +1,6 @@
 /* استيراد الخطوط */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap'); /* بديل قريب من خط الجزيرة */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap');
 
 /* إعدادات عامة */
 body {
@@ -78,17 +78,33 @@ nav ul li a:hover {
   margin: 10px 0;
 }
 
-/* قسم التوصيل */
-#delivery {
-  background-color: #f9f9f9;
+/* الحاوية للتوصيل والاتصال */
+#info-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
   padding: 40px 20px;
-  text-align: center;
 }
 
-/* قسم التواصل */
-#contact {
-  padding: 40px 20px;
-  text-align: center;
+#info-sections .delivery {
+  flex: 1;
+  background: #f8cce0; /* وردي فاتح */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#info-sections .contact {
+  flex: 1;
+  background: #f9f9f9; /* رمادي فاتح */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#info-sections h2 {
+  color: #b30059;
+  margin-bottom: 15px;
 }
 
 /* الشبكات الاجتماعية */
@@ -99,14 +115,21 @@ nav ul li a:hover {
 }
 
 .social-links a {
-  margin: 0 15px;
-  font-size: 1.8em;
-  color: #333;
-  transition: color 0.3s ease;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #b30059;
+  margin: 5px;
+  font-size: 1.5em;
+  transition: 0.3s;
 }
 
 .social-links a:hover {
-  color: #b30059;
+  background: #b30059;
+  color: #fff;
 }
 
 /* التذييل */
@@ -120,6 +143,7 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
 /* نسخة الهاتف */
 @media (max-width: 768px) {
   nav ul {
@@ -138,39 +162,12 @@ footer p {
   .social-links a {
     font-size: 1.5em;
     margin: 10px;
-    display: inline-block;
   }
 
   #map, iframe {
     height: 250px;
   }
-}
-/* تنسيق الحاوية */
-#info-sections {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 40px 20px;
-}
 
-/* كل قسم يأخذ نصف العرض */
-#info-sections .delivery,
-#info-sections .contact {
-  flex: 1;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* العناوين */
-#info-sections h2 {
-  color: #b30059;
-  margin-bottom: 15px;
-}
-
-/* نسخة الهاتف */
-@media (max-width: 768px) {
   #info-sections {
     flex-direction: column;
   }
